@@ -1,0 +1,169 @@
+/*
+	@modCssClasses
+	@customTag: input-box
+	@cssMod: mod_alignRight
+	@cssMod: mod_small
+	@cssMod: mod_uppercase
+	@cssMod: mod_forceIcon
+	--theme-transitionDuration 			0.15s
+	--theme-highlightedBackgroundColor 	rgba(0, 0, 0, 0.1)
+	--theme-errorBackgroundColor 		rgba(255, 0, 0, 0.2)
+	--theme-secondaryFont 				rgba(0, 0, 0, 0.6)
+	--theme-mainFont 					rgba(0, 0, 0, 1)
+	--theme-errorFont 					rgba(255, 68, 68, 1)
+	--theme-inputBackgroundColor 		rgba(0, 0, 0, 0)
+*/
+
+
+
+
+input-box {
+	display: block;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+	overflow: hidden;
+	padding-top: 0.5rem;
+	padding-right: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 4rem;
+	margin-left: 0;
+	background-color: var(--theme-highlightedBackgroundColor, rgba(0, 0, 0, 0.1));
+	transition-property: background-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	min-height: 4.2rem;
+}
+
+input-box.mod_small {
+	min-height: 3rem;
+	min-width: 15rem;
+}
+
+input-box.error {
+	background-color: var(--theme-errorBackgroundColor, rgba(255, 0, 0, 0.2));
+}
+
+input-box .title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+input-box .title .titleElem {
+	color: var(--theme-secondaryFont, rgba(0, 0, 0, 0.6));
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	font-weight: 400;
+	line-height: 1.2rem;
+}
+
+input-box .title .errorElem {
+	color: var(--theme-errorFont, rgba(255, 68, 68, 1));
+	opacity: 0;
+	line-height: 1.2rem;
+	transition-property: opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+input-box.error .title .errorElem {
+	opacity: 1;
+}
+
+input-box .body {
+	display: flex;
+	align-items: center;
+}
+
+input-box .body p {
+	margin-right: 0.5rem;
+	font-weight: 600;
+	color: var(--theme-secondaryFont);
+	border-right: solid 2px var(--theme-discreetBoxShadow);
+	padding-right: 0.5rem;
+}
+
+input-box .body .input {
+	flex: 1;
+	background-color: var(--theme-inputBackgroundColor, rgba(0, 0, 0, 0));
+	font-weight: 600;
+	line-height: 2rem;
+	width: 0;
+	color: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	transition-property: color, opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	padding-right: 0.25rem;
+}
+
+input-box.mod_small .body .input {
+	font-size: 0.94rem;
+}
+
+input-box.mod_alignRight .body .input {
+	text-align: right;
+}
+
+input-box.mod_uppercase .body .input {
+	text-transform: uppercase;
+}
+
+input-box .body .input:disabled {
+	opacity: 0.6;
+}
+
+input-box .body .input::placeholder {
+	font-weight: 100;
+	font-size: 0.95rem;
+}
+
+input-box.mod_small .body .input::placeholder {
+	font-size: 0.94rem;
+}
+
+input-box .body .icon {
+	height: 2rem;
+	display: flex;
+	max-width: 2rem;
+	opacity: 0;
+	text-align: center;
+	cursor: pointer;
+	transition-property: opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	justify-content: center;
+}
+
+input-box .body .input:disabled + .icon {
+	cursor: default;
+}
+
+input-box .body .input:disabled + .span.active {
+	opacity: 0.5;
+}
+
+input-box.errorTemp .body .icon.active {
+	opacity: 1;
+}
+
+input-box .body .icon.active {
+	opacity: 0.5;
+}
+
+input-box .body .icon.active:hover {
+	opacity: 1;
+}
+
+input-box .body .icon svg {
+	width: 66%;
+	fill: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	transition-property: fill;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}

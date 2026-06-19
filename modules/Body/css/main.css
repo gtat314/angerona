@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: var( --theme-mainFontFamily, 'Open Sans', sans-serif );
+	text-decoration: none;
+	color: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-clear-button {
+	display: none;
+}
+
+a {
+	-webkit-tap-highlight-color: var(---theme-inputBackgroundColor, rgba(0, 0, 0, 0));
+}
+
+
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg); /*@universal*/
+	}
+	to {
+		transform: rotate(359deg); /*@universal*/
+	}
+}
+
+.animateRotation {
+	animation: rotation 2s infinite linear;
+}
+
+.mod_displayNone {
+	display: none;
+}

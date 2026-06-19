@@ -1,0 +1,539 @@
+/*
+	@modCssClasses
+	@customTag: main-wrap
+	@customTag: main
+		@cssMod: mod_constrained
+		@cssMod: mod_margin0
+		@cssMod: mod_popup
+		@cssMod: mod_wide
+	@customTag: container-box
+		@cssMod: mod_gap1
+		@cssMod: mod_forceRow
+	@customTag: hr
+		@cssMod: mod_dashed
+		@cssMod: mod_withText
+	@customTag: col-auth
+	@customTag: col-mob
+	@customTag: col-min
+		@cssMod: mod_vBottom
+	@customTag: col-1
+	@customTag: col-2
+	@customTag: col-3
+	@customTag: col-4
+	@customTag: col-5
+	@customTag: col-6
+	@customTag: col-7
+	@customTag: col-8
+	@customTag: col-9
+	@cssMod: mod_maxWidth35
+	@cssMod: mod_topAlign
+	@cssMod: mod_middleAlign
+	@cssMod: mod_mtAuto
+	@cssMod: mod_mt0
+	@cssMod: mod_mt0_5
+	@cssMod: mod_mt1
+	@cssMod: mod_mt2
+	@cssMod: mod_mt3
+	@cssMod: mod_mt4
+	@cssMod: mod_mb0
+	@cssMod: mod_mb0_25
+	@cssMod: mod_mb0_5
+	@cssMod: mod_mb1
+	@cssMod: mod_mb2
+	@cssMod: mod_mb3
+	@cssMod: mod_mb4
+	@cssMod: mod_padding0
+	@cssMod: mod_hideUnder1024
+	@cssMod: mod_reverseUnder900
+	@cssMod: mod_invisible
+	@cssMod: mod_hidden
+	--theme-bodyBackgroundColor 		rgba(255, 255, 255, 1)
+	--theme-transitionDuration 			0.15s
+	--theme-mainFont 					rgba(0, 0, 0, 1)
+	--theme-inputBackgroundColor 		rgba(0, 0, 0, 0)
+	--theme-highlightedBackgroundColor 	rgba(0, 0, 0, 0.1)
+*/
+
+
+
+
+::-webkit-scrollbar {
+	width: 1px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--theme-bodyBackgroundColor, rgba(255, 255, 255, 1));
+	transition-property: background-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	transition-property: background-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+* {
+	scrollbar-width: auto;
+}
+
+.mod_mtAuto {
+	margin-top: auto;
+}
+
+.mod_mt0 {
+	margin-top: 0;
+}
+
+.mod_mt0_5 {
+	margin-top: 0.5rem;
+}
+
+.mod_mt1 {
+	margin-top: 1rem;
+}
+
+.mod_mt2 {
+	margin-top: 2rem;
+}
+
+.mod_mt3 {
+	margin-top: 3rem;
+}
+
+.mod_mt4 {
+	margin-top: 4rem;
+}
+
+.mod_mb0 {
+	margin-bottom: 0 !important;
+}
+
+.mod_mb0_25 {
+	margin-bottom: 0.25rem !important;
+}
+
+.mod_mb0_5 {
+	margin-bottom: 0.5rem !important;
+}
+
+.mod_mb1 {
+	margin-bottom: 1rem !important;
+}
+
+.mod_mb2 {
+	margin-bottom: 2rem !important;
+}
+
+.mod_mb3 {
+	margin-bottom: 3rem !important;
+}
+
+.mod_mb4 {
+	margin-bottom: 4rem !important;
+}
+
+
+
+
+body.mod_padding0 {
+	padding: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0 !important;
+}
+
+
+
+
+main-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 6;
+	display: none;
+	backdrop-filter: blur(6px) brightness(66%);
+}
+
+main-wrap.active {
+	display: flex;
+}
+
+
+
+
+main {
+	margin-top: 0;
+	margin-right: 2.5vw;
+	margin-bottom: 0;
+	margin-left: 2.5vw;
+	display: flex;
+	gap: 2.5vw;
+	transition-property: opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+main.mod_popup {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-width: 50rem;
+	height: 80vh;
+	overflow: scroll;
+	padding: 0 1rem 1rem 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 1rem rgb(0, 0, 0);
+	margin: auto;
+	background-color: var(--theme-background, rgba(255, 255, 255, 1));
+	transition-property: background-color, box-shadow, border-color, opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	flex-direction: column;
+	width: 40vw;
+	display: flex;
+	scrollbar-width: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--theme-highlightedBackgroundColor, rgba(0, 0, 0, 0.1));
+	gap: unset;
+}
+
+main.mod_popup.mod_wide {
+	width: 80vw;
+}
+
+main.mod_constrained {
+	max-width: 80rem;
+	width: 90%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+main.mod_margin0 {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+@media only screen and (max-device-width: 1700px) {
+
+    main {
+		margin-top: 0;
+		margin-right: 2.5vw;
+		margin-bottom: 8rem;
+		margin-left: 2.5vw;
+		gap: 2.5vw;
+	}
+
+}
+
+@media only screen and (max-device-width: 1200px) {
+
+    main.mod_constrained {
+        width: 95vw;
+    }
+
+}
+
+@media only screen and (max-device-width: 900px) {
+
+    main {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-device-width: 680px) {
+
+    main.mod_constrained {
+		margin-top: 0;
+		margin-right: auto;
+		margin-bottom: 8rem;
+		margin-left: auto;
+    }
+
+}
+
+
+
+
+container-box {
+	display: flex;
+	gap: 2.5vw;
+}
+
+container-box.mod_gap1 {
+	gap: 1rem;
+}
+
+container-box.mod_gap2 {
+	gap: 2rem;
+}
+
+@media only screen and (max-device-width: 680px) {
+
+    container-box {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    container-box.mod_gap1,
+	container-box.mod_gap2 {
+        gap: 0;
+    }
+
+	container-box.mod_forceRow {
+		flex-direction: row;
+		gap: unset;
+	}
+
+	container-box.mod_gap1.mod_forceRow,
+	container-box.mod_gap2.mod_forceRow {
+        gap: 1rem;
+    }
+
+}
+
+
+
+
+main hr {
+	border-top-style: none;
+	border-top-width: 0px;
+	border-top-color: var(--theme-inputBackgroundColor, rgba(0, 0, 0, 0));
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--theme-highlightedBackgroundColor, rgba(0, 0, 0, 0.1));
+	margin-top: 0rem;
+	margin-right: 0.5rem;
+	margin-bottom: 4rem;
+	margin-left: 0.5rem;
+	transition-property: border-bottom-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+main hr.mod_dashed {
+	border-bottom-style: dashed;
+}
+
+main hr.mod_withText {
+	border: 0;
+	line-height: 1.5rem;
+	position: relative;
+	text-align: center;
+	height: 1.5rem;
+	font-size: 1rem;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+main hr.mod_withText::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+	background-color: var(--theme-discreetBoxShadow, rgba(0, 0, 0, 0.2));
+	transition-property: background-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+main hr.mod_withText::after {
+	content: attr(data-content);
+	position: relative;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	line-height: 1.5rem;
+	color: var(--theme-secondaryFont, rgba(0, 0, 0, 0.6));
+	background-color: var(--theme-background, rgba(255, 255, 255, 1));
+	transition-property: background-color, color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	font-weight: 900;
+}
+
+
+
+
+.mod_middleAlign {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+
+
+.mod_topAlign {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+
+
+
+.mod_invisible {
+	opacity: 0;
+}
+
+
+
+
+.mod_hidden {
+	display: none;
+}
+
+.mod_hiddenImportant {
+	display: none !important;
+}
+
+
+
+
+.mod_maxWidth35 {
+	max-width: 35rem;
+}
+
+@media only screen and (max-device-width: 680px) {
+
+	.mod_maxWidth35 {
+		max-width: unset;
+	}
+
+}
+
+
+
+
+col-auth {
+	min-height: max-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 95%;
+	max-width: 30rem;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	height: 100vh;
+}
+
+
+
+
+col-mob {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 95%;
+	max-width: 40rem;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+
+
+
+col-min {
+	min-width: max-content;
+}
+
+col-min.mod_vBottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+
+
+
+col-1 {
+	flex: 1;
+	transition-property: flex;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+
+
+
+col-2 {
+	flex: 2;
+}
+
+
+
+
+col-3 {
+	flex: 3;
+}
+
+
+
+
+col-4 {
+	flex: 4;
+}
+
+
+
+
+col-5 {
+	flex: 5;
+}
+
+
+
+
+col-6 {
+	flex: 6;
+}
+
+
+
+
+col-7 {
+	flex: 7;
+}
+
+
+
+
+col-8 {
+	flex: 8;
+}
+
+
+
+
+col-9 {
+	flex: 9;
+}
+
+
+
+
+@media only screen and (max-device-width: 1024px) {
+
+    .mod_hideUnder1024 {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-device-width: 900px) {
+
+    .mod_reverseUnder900 {
+        flex-direction: column-reverse;
+    }
+
+}
