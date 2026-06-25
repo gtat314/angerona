@@ -1,3 +1,11 @@
 /// <reference path="../modules/Body/js/main.js" />
 /// <reference path="../modules/InputBox/js/main.js" />
 /// <reference path="../modules/Main/js/main.js" />
+/// <reference path="../modules/Header/js/main.js" />
+
+
+
+
+const SvgIcons = {
+    'left': "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'><path d='M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z'/></svg>"
+};
