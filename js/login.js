@@ -7,19 +7,12 @@
 
 
 
-function init() {
-
-    const pin = sessionStorage.getItem( 'pin' );
-
-    if ( pin === null ) {
-
-        window.location.href = '/login.html';
-
+const AppState = {
+    'modules': {
+        'header': new Header({
+            'main': {
+                'title': 'Login'
+            }
+        })
     }
-
 };
-
-
-
-
-init();
