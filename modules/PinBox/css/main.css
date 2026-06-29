@@ -1,0 +1,105 @@
+/*
+	@modCssClasses
+	@customTag: pin-box
+	--theme-highlightedBackgroundColor 	rgba(0, 0, 0, 0.1)
+	--theme-transitionDuration 			0.15s
+	--theme-errorBackgroundColor 		rgba(255, 0, 0, 0.2)
+	--theme-secondaryFont				rgba(0, 0, 0, 0.6)
+	--theme-errorFont 					rgba(255, 68, 68, 1)
+	--theme-mainFont 					rgba(0, 0, 0, 1)
+*/
+
+
+
+
+pin-box {
+	display: block;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 4rem;
+	margin-left: 0;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+	padding-top: 0.5rem;
+	padding-right: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
+	background-color: var(--theme-highlightedBackgroundColor, rgba(0, 0, 0, 0.1));
+	transition-property: background-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	min-height: 4.2rem;
+}
+
+pin-box.error {
+	background-color: var(--theme-errorBackgroundColor, rgba(255, 0, 0, 0.2));
+}
+
+pin-box .title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+pin-box .title .titleElem {
+	color: var(--theme-secondaryFont, rgba(0, 0, 0, 0.6));
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	font-weight: 400;
+	line-height: 1.2rem;
+}
+
+pin-box .title .errorElem {
+	color: var(--theme-errorFont, rgb(255, 68, 68));
+	opacity: 0;
+	line-height: 1.2rem;
+	transition-property: opacity;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+pin-box.error .title .errorElem {
+	opacity: 1;
+}
+
+pin-box .body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+pin-box .body input {
+	width: 2rem;
+	min-width: 2rem;
+	max-width: 2rem;
+	background-color: transparent;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--theme-mainFont, rgb(0, 0, 0));
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	border-bottom-style: solid;
+	border-bottom-width: 0.15rem;
+	border-bottom-color: var(--theme-secondaryFont, rgba(0, 0, 0, 0.6));
+}
+
+/* Chrome, Safari, Edge, Opera */
+pin-box .body input[type="number"]::-webkit-outer-spin-button,
+pin-box .body input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+pin-box .body input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* Standard modern property */
+}

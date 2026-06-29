@@ -2,6 +2,7 @@
 /// <reference path="../modules/InputBox/js/main.js" />
 /// <reference path="../modules/Main/js/main.js" />
 /// <reference path="../modules/Header/js/main.js" />
+/// <reference path="../modules/PinBox/js/main.js" />
 
 
 
