@@ -266,7 +266,7 @@ function InputBox( schema ) {
 
 
 
-    if ( typeof schema.parent === 'object' ) {
+    if ( schema.parent instanceof HTMLElement ) {
 
         this._parentElem = schema.parent;
 
