@@ -222,7 +222,7 @@ main.mod_margin0 {
 	margin-left: 0;
 }
 
-@media only screen and (max-device-width: 1700px) {
+@media only screen and (max-width: 1700px) {
 
     main {
 		margin-top: 0;
@@ -234,7 +234,7 @@ main.mod_margin0 {
 
 }
 
-@media only screen and (max-device-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 
     main.mod_constrained {
         width: 95vw;
@@ -242,7 +242,7 @@ main.mod_margin0 {
 
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 900px) {
 
     main {
         flex-direction: column;
@@ -250,7 +250,7 @@ main.mod_margin0 {
 
 }
 
-@media only screen and (max-device-width: 680px) {
+@media only screen and (max-width: 680px) {
 
     main.mod_constrained {
 		margin-top: 0;
@@ -277,7 +277,7 @@ container-box.mod_gap2 {
 	gap: 2rem;
 }
 
-@media only screen and (max-device-width: 680px) {
+@media only screen and (max-width: 680px) {
 
     container-box {
         flex-direction: column;
@@ -402,7 +402,7 @@ main hr.mod_withText::after {
 	max-width: 35rem;
 }
 
-@media only screen and (max-device-width: 680px) {
+@media only screen and (max-width: 680px) {
 
 	.mod_maxWidth35 {
 		max-width: unset;
@@ -522,7 +522,7 @@ col-9 {
 
 
 
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
 
     .mod_hideUnder1024 {
         display: none;
@@ -530,7 +530,7 @@ col-9 {
 
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 900px) {
 
     .mod_reverseUnder900 {
         flex-direction: column-reverse;

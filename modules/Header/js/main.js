@@ -62,7 +62,7 @@ function Header ( schema ) {
 
     if ( schema.hasOwnProperty( 'parent' ) ) {
 
-        if ( schema.parent instanceof HTMLElement ) {
+        if ( typeof schema.parent === 'object' ) {
 
             headerElem = schema.parent;
 

@@ -87,7 +87,7 @@ function PinBox( schema ) {
 
 
 
-    if ( schema.parent instanceof HTMLElement ) {
+    if ( typeof schema.parent === 'object' ) {
 
         this._parentElem = schema.parent;
 
