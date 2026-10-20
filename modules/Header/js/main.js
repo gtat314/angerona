@@ -155,6 +155,7 @@ function Header ( schema ) {
 
         this._mainTitleElem = document.createElement( 'P' );
         this._mainTitleElem.classList.add( 'title' );
+        this._mainTitleElem.setAttribute( 'title', schema.main.title );
         this._mainTitleElem.innerHTML = schema.main.title;
         mainElem.appendChild( this._mainTitleElem );
 
@@ -162,6 +163,7 @@ function Header ( schema ) {
 
             this._mainSubtitleElem = document.createElement( 'SAMP' );
             this._mainSubtitleElem.classList.add( 'subtitle' );
+            this._mainSubtitleElem.setAttribute( 'title', schema.main.subtitle );
             this._mainSubtitleElem.innerHTML = schema.main.subtitle;
             mainElem.appendChild( this._mainSubtitleElem );
     
@@ -213,6 +215,7 @@ function Header ( schema ) {
  */
 Header.prototype.setMainTitle = function( title ) {
 
+    this._mainTitleElem.setAttribute( 'title', title );
     this._mainTitleElem.innerHTML = title;
 
 };
@@ -223,6 +226,7 @@ Header.prototype.setMainTitle = function( title ) {
  */
 Header.prototype.setMainSubtitle = function( subtitle ) {
 
+    this._mainSubtitleElem.setAttribute( 'title', subtitle );
     this._mainSubtitleElem.innerHTML = subtitle;
 
 };
